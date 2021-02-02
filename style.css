@@ -41,6 +41,10 @@ body {
     margin-bottom: 30px;
 }
 
+.players p {
+    font-size: 24px;
+}
+
 .dice-one,
 .dice-two {
     display: flex;
@@ -49,6 +53,9 @@ body {
     border: 1px solid black;
     justify-content: center;
     align-items: center;
+    font-size: 42px;
+    border-radius: 20px;
+    color: darkred;
 }
 
 .play {
