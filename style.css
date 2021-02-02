@@ -58,20 +58,34 @@ body {
     color: darkred;
 }
 
-.play {
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.play,
+.edit-name {
     background: none;
     border: 1px solid white;
     width: 150px;
     height: 50px;
-    margin-top: 30px;
     border-radius: 5px;
     font-size: 26px;
     text-transform: uppercase;
     color: white;
+    margin-bottom: 10px;
+}
+
+.edit-name {
+    font-size: 22px;
+    width: 130px;
+    height: 40px;
+}
+
+.play {
+    margin-bottom: 30px;
 }
 
 .result {
