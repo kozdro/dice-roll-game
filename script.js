@@ -9,7 +9,6 @@ const startBtn = document.querySelector('.play');
 const result = document.querySelector('.header h1');
 
 
-
 const editNames = () => {
     const newNameOne = prompt('Set name for Player One', 'Player One');
     playerOneName.textContent = newNameOne;
@@ -20,9 +19,13 @@ const editNames = () => {
 const startGame = () => {
     diceImg1.classList.add('active');
     diceImg2.classList.add('active');
+
     setTimeout(() => {
         const numberDiceOne = Math.floor(Math.random()*6+1);
         const numberDiceTwo = Math.floor(Math.random()*6+1);
+
+        diceImg1.setAttribute('src', `images/${numberDiceOne}.png`);
+        diceImg2.setAttribute('src', `images/${numberDiceTwo}.png`);
 
         if (numberDiceOne > numberDiceTwo) {
             result.textContent = `${playerOneName.textContent} wins!`
@@ -30,8 +33,8 @@ const startGame = () => {
             result.textContent = `${playerTwoName.textContent} wins!`
         } else {
             result.textContent = 'Draw!'
-        }
-    }, 1000)
+        };
+    }, 1500);
 };
 
 

@@ -60,7 +60,7 @@ body {
 #dice-img1,
 #dice-img2 {
     display: block;
-    width: 90%;
+    width: 80%;
     transition: 1.5s;
 }
 
