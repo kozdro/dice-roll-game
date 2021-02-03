@@ -2,6 +2,8 @@ const playerOneName = document.querySelector('.player-one');
 const playerTwoName = document.querySelector('.player-two');
 const diceOne = document.querySelector('.dice-one');
 const diceTwo = document.querySelector('.dice-two');
+const diceImg1 = document.getElementById('dice-img1');
+const diceImg2 = document.getElementById('dice-img2');
 const editBtn = document.querySelector('.edit-name');
 const startBtn = document.querySelector('.play');
 const result = document.querySelector('.header h1');
@@ -16,11 +18,11 @@ const editNames = () => {
 };
 
 const startGame = () => {
+    diceImg1.classList.add('active');
+    diceImg2.classList.add('active');
     setTimeout(() => {
         const numberDiceOne = Math.floor(Math.random()*6+1);
         const numberDiceTwo = Math.floor(Math.random()*6+1);
-        diceOne.textContent = numberDiceOne;
-        diceTwo.textContent = numberDiceTwo;
 
         if (numberDiceOne > numberDiceTwo) {
             result.textContent = `${playerOneName.textContent} wins!`

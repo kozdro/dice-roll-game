@@ -53,9 +53,20 @@ body {
     border: 1px solid black;
     justify-content: center;
     align-items: center;
-    font-size: 42px;
     border-radius: 20px;
-    color: darkred;
+    background-color: black;
+}
+
+#dice-img1,
+#dice-img2 {
+    display: block;
+    width: 90%;
+    transition: 1.5s;
+}
+
+#dice-img1.active,
+#dice-img2.active {
+    transform: rotate(720deg);
 }
 
 .buttons {
