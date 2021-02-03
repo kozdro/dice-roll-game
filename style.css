@@ -20,6 +20,7 @@ body {
     background-color: #8da5a5;
     border-right: none;
     text-align: center;
+    box-shadow: 10px 5px 10px #096F6F;
 }
 
 .results-table h3 {
