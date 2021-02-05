@@ -27,8 +27,8 @@ const editNames = () => {
 };
 
 const startGame = () => {
-    diceImg1.classList.add('active');
-    diceImg2.classList.add('active');
+    diceImg1.classList.toggle('active');
+    diceImg2.classList.toggle('active');
 
     setTimeout(() => {
         const numberDiceOne = Math.floor(Math.random()*6+1);
@@ -40,17 +40,22 @@ const startGame = () => {
         if (numberDiceOne > numberDiceTwo) {
             result.textContent = `${playerOneName.textContent} wins!`
             wins1++;
-            results1.innerHTML = wins1;
+            results1.innerText = wins1;
         } else if (numberDiceTwo > numberDiceOne) {
             result.textContent = `${playerTwoName.textContent} wins!`
             wins2++;
-            results2.innerHTML = wins2;
+            results2.innerText = wins2;
         } else {
             result.textContent = 'Draw!'
             draws++;
-            results3.textContent = draws;
+            results3.innerText = draws;
         };
-    }, 1500);
+
+        setTimeout(() => {
+            diceImg1.setAttribute('src', 'images/dice.png');
+            diceImg2.setAttribute('src', 'images/dice.png');
+        }, 3500)
+    }, 1800);
 };
 
 
