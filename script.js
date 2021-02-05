@@ -53,10 +53,6 @@ const startGame = () => {
     }, 1500);
 };
 
-const resultsTable = () => {
-
-};
-
 
 editBtn.addEventListener('click', editNames);
 startBtn.addEventListener('click', startGame);
