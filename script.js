@@ -29,6 +29,7 @@ const editNames = () => {
 const startGame = () => {
     diceImg1.classList.toggle('active');
     diceImg2.classList.toggle('active');
+    startBtn.style.visibility = 'hidden';
 
     setTimeout(() => {
         const numberDiceOne = Math.floor(Math.random()*6+1);
@@ -54,7 +55,8 @@ const startGame = () => {
         setTimeout(() => {
             diceImg1.setAttribute('src', 'images/dice.png');
             diceImg2.setAttribute('src', 'images/dice.png');
-        }, 3500)
+            startBtn.style.visibility = '';
+        }, 3000)
     }, 1800);
 };
 
